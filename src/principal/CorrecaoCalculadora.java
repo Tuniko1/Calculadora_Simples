@@ -38,14 +38,10 @@ public class CorrecaoCalculadora {
 				System.out.println ((numero * i)+ "/"+numero + " = "+(numero *i / numero));
 			}
 			break;
-			
-		
 		default: 
 			System.out.println("Opção não encontrada!");
 			break;
 		}
 		sc.close();
-		
 	}
-
 }

@@ -1,7 +1,11 @@
+/*@author Arthur Pereira
+*/
 package principal;
 import java.util.Scanner;
+
 public class Program {
 
+	
 	public static void main(String[] args) {
 		//Faça um programa que receba o tipo de operação a ser realizada
 		//(soma, divisão, multiplicação, subtração) 
@@ -16,7 +20,7 @@ public class Program {
 		int tabSoma;
 		char opcao1;
 		
-		System.out.println("Deseja iniciar o programa?");
+		System.out.println("Deseja iniciar o programa? Sim ou Não?" );
 		opcao = sc.next().charAt(0);
 		while (opcao == 's' || opcao == 'S') {
 		
@@ -34,13 +38,12 @@ public class Program {
 			System.out.println("Insira o número para a tabuada: ");
 			numero = sc.nextInt();
 			
-			for (int contador = 1; contador <= 10; contador++){
-				 
+				for (int contador = 1; contador <= 10; contador++){ 
 				 tabSoma = (contador + numero);
 				 System.out.println("Tabuada -> "+numero+" + "+contador+" = "+ (contador + numero));
 				 System.out.println();
-			}}
-		else if(operacao == 2) {
+				 }
+		}else if(operacao == 2) {
 				
 			System.out.println("Insira o número para a tabuada: ");
 			numero = sc.nextInt();
@@ -50,45 +53,45 @@ public class Program {
 				 System.out.println ("Tabuada -->"+(numero * contador)+"/"+numero + " = "+(tabSoma));
 				 System.out.println();
 				 }
-					
-			}else if(operacao == 3) {
+				
+		}else if(operacao == 3) {
 				
 			System.out.println("Insira o número para a tabuada: ");
 			numero = sc.nextInt();
-				
+			
 				 for (int contador = 1; contador <= 10; contador++){
 				 tabSoma = (contador * numero);
 				 System.out.println("Tabuada -> "+numero + " x " + contador + " = "+(tabSoma));
-				 System.out.println();
+				 System.out.println();	 
+				 }
 				 
-		  }
-			 }else if(operacao == 4) {
+		}else if(operacao == 4) {
 				
 			System.out.println("Insira o número para a tabuada: ");
 			numero = sc.nextInt();
 				
 				 for (int contador = 1; contador <= 10; contador++){
 				 int aux = numero;
-				 //System.out.println("Tabuada -> "+numero+" - "+contador+" = "+tabSoma);
 				 tabSoma = ((aux+contador )- numero);
 				 System.out.println( (aux + contador)+" - " + (numero) + " = " + tabSoma);
 				 System.out.println();
 				 }
 		}else {
-			System.out.println("NÚMERO INVÁLIDO PARA ESCOLHA DA OPERAÇÃO!");
-			System.out.println("Vamos tentar novamente: ");
-			System.out.println();
-		}
-		System.out.println("Deseja continuar? ");
-		opcao1 = sc.next().charAt(0);
+				 System.out.println();
+			 	 System.out.println("NÚMERO INVÁLIDO PARA ESCOLHA DA OPERAÇÃO!");
+				 System.out.println();
+			}
+				 System.out.println("Deseja iniciar novamente? ");
+				 opcao1 = sc.next().charAt(0);
+				
 		}while(opcao1 == 's'||opcao1 == 'S');{ 
-			if (opcao1 != 's'|| opcao1 != 'S') {
-			System.out.println("Voce terminou por aqui!! :)");
+				if (opcao1 != 's'|| opcao1 != 'S') {
+				System.out.println("Voce terminou por aqui!! :)");
 				System.exit(0);
+				}
 			}
 		}
-		}System.out.println("Você terminou por aqui!! :)");
-		sc.close();
+				System.out.println("Você terminou por aqui!! :)");
+				sc.close();
 	}
-
 }
